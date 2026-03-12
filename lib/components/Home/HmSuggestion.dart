@@ -26,14 +26,14 @@ class _HmSuggestionState extends State<HmSuggestion> {
           children: [
             Image.network(
               //图片错误时返回一个未加载的图片
-              errorBuilder: (context, error, stackTrace) => Image.asset('assets/home_cmd_inner.png',width: 100,height: 100,),
+              errorBuilder: (context, error, stackTrace) => Image.asset('assets/home_cmd_inner.png',width: 50,height: 50,),
               items[index].picture,
               fit: BoxFit.cover,
-              width: 100,
+              width:85,
               height: 100,
               alignment: Alignment.center,
             ),
-            SizedBox(height: 5,),
+            SizedBox(width: 10,height: 10,),
             Container(
               padding: EdgeInsets.symmetric(horizontal: 5,vertical: 2),
               decoration: BoxDecoration(
@@ -71,6 +71,7 @@ class _HmSuggestionState extends State<HmSuggestion> {
               SizedBox(width: 20,),
               Expanded(
                 child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                   children: _getChildrenList(),
                 )
                 ),
