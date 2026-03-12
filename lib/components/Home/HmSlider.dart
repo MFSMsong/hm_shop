@@ -11,7 +11,7 @@ class HmSlider extends StatefulWidget {
 }
 
 class _HmSliderState extends State<HmSlider> {
-  CarouselSliderController _carouselController = CarouselSliderController();
+  final CarouselSliderController _carouselController = CarouselSliderController();
   int _currentIndex = 0;
 
   @override
@@ -27,7 +27,7 @@ class _HmSliderState extends State<HmSlider> {
         widget.bannerList.length,
         (index) => Container(
           child: Image.network(
-            widget.bannerList[index].imageUrl!,
+            widget.bannerList[index].imageUrl,
             fit: BoxFit.cover,
             width: MediaQuery.of(context).size.width,
             ),
@@ -36,11 +36,10 @@ class _HmSliderState extends State<HmSlider> {
       options: CarouselOptions(
         onPageChanged: (index,reason) {
           _currentIndex = index;
-          setState(() {
-            
+          setState(() { 
           });
         },
-        height: 200,
+        height: 300,
         autoPlay: true,
         viewportFraction: 1,
         autoPlayInterval: Duration(seconds: 3),

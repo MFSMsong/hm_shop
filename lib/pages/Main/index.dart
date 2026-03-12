@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:myproject/pages/Cart/index.dart';
 import 'package:myproject/pages/Category/index.dart';
 import 'package:myproject/pages/Home/index.dart';
-import 'package:myproject/pages/Mine/Mine.dart';
+import 'package:myproject/pages/Mine/index.dart';
 
 class MainPage extends StatefulWidget {
   MainPage({Key? key}) : super(key: key);
@@ -19,23 +19,23 @@ class _MainPageState extends State<MainPage> {
   //一般导航栏是不可更改的
   final List <Map<String, dynamic>> _tabList = [
     {
-      'icon':'lib/assets/ic_public_cart_normal.png',
-      'active_icon':'lib/assets/ic_public_cart_active.png',
+      'icon':'ic_public_cart_normal.png',
+      'active_icon':'ic_public_cart_active.png',
       'label': '首页',
     },
     {
-      'icon':'lib/assets/ic_public_pro_normal.png',
-      'active_icon':'lib/assets/ic_public_pro_active.png',
+      'icon':'ic_public_pro_normal.png',
+      'active_icon':'ic_public_pro_active.png',
       'label': '分类',
     },
     {
-      'icon':'lib/assets/ic_public_cart_normal.png',
-      'active_icon':'lib/assets/ic_public_cart_active.png',
+      'icon':'ic_public_cart_normal.png',
+      'active_icon':'ic_public_cart_active.png',
       'label': '购物车',
     },
     {
-      'icon':'lib/assets/ic_public_my_normal.png',
-      'active_icon':'lib/assets/ic_public_my_active.png',
+      'icon':'ic_public_my_normal.png',
+      'active_icon':'ic_public_my_active.png',
       'label': '我的',
     },
   ];
